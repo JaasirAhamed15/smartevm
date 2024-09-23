@@ -1,10 +1,13 @@
 .config-body {
-    background-color: #F2F2F2;
-    padding: 20px 0px;
-    width: 30vw;
-    height: 80vh;
+    display: flex;   
 }
 
+.config-body .config-details {
+    width: 30vw;
+    height: 80vh;
+    background-color: #F2F2F2;
+    padding: 20px 0px;
+}
 .config-details h1 {
     font-size: 50px;
 }
@@ -14,4 +17,17 @@
     height: 30px;
     padding: 10px 15px;
     margin-top: 10px;
+}
+
+.config-submit {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.config-submit button {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 35px;
+    
 }
