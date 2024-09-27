@@ -1,8 +1,12 @@
 .config-body {
     display: flex;   
+    justify-content: space-between;
 }
 
 .config-body .config-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 30vw;
     height: 80vh;
     background-color: #F2F2F2;
@@ -11,24 +15,111 @@
 
 .config-details h1 {
     font-size: 50px;
+    color: rgb(0, 0, 120);
 }
 
 .config-details input {
+    
     width: 80%;
     height: 30px;
     padding: 10px 15px;
     margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+    border: none;
 }
 
 .config-submit {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
+    /* align-items: end; */
 }
 
-.config-submit button {
-    border-radius: 30px;
-    padding: 10px 20px;
-    font-size: 35px;
+
+
+.submit-btn{
+    background-color: #4CAF4F;
+    font-family:  Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    width: 100px;
+    height: 50px;
+}
+
+.submit-btn:hover{
+    box-shadow: 0 5px 15px #4CAF4F;
+    border: #4CAF4F;
+}
+
+.cancel-btn{
+    background-color: #ff0000;
+    font-family:  Georgia, 'Times New Roman', Times, serif;
     
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    width: 100px;
+    height: 50px;
+}
+
+
+.cancel-btn:hover{
+    box-shadow: 0 5px 15px #ff0000;
+    border: #ff0000;
+}
+
+
+.config-right{
+    background-color: #F2F2F2;
+    width: 66vw;
+    height: 90vh;
+}
+
+.button-design{
+
+    background: #4CAF4F;
+    width: 65vw;
+    height: 9.5vh;
+    border-radius: 15px;
+    margin: 10px 10px;
+    display: flex;
+    float: row;
+    justify-content: space-around;
+}
+
+.button-design h1{
+
+    font-size: 40px;
+    color: white;
+    padding: 10px;
+    overflow: hidden;
+}
+                        
+.name{
+
+    width: 30vw;
+    height: 5vh;
+    border: none;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+}
+
+.option{
+    width: 10vw;
+    height: 6vh;    
+    border: none;
+    border-radius: 20px;
+    margin: 12px;
+    padding: 10px;
+    font-size:16px;
 }

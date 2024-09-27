@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div>
-        <Config />
+        <Config/>
     </div>
   )
 }
