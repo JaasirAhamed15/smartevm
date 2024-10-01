@@ -6,11 +6,15 @@ import axios from 'axios';
 const Config = () => {
   const [candidates, setCandidates] = useState(Array(8).fill('')); 
   const [options, setOptions] = useState(Array(8).fill('0'));  
-  const [serialID, setSerialID] = useState('');  
+  const [serialID, setSerialID] = useState('');
+  
+  
 
   const btnclick = async () => {
     const updatedCandidates = [];
     const updatedOptions = [];
+    const pins=[];
+    const votes=[10,10,10,10,10,10,10,10];
 
     
     if (!serialID) {
@@ -37,12 +41,29 @@ const Config = () => {
 
     // Map the options to integers
     const summa = updatedOptions.map(option => parseInt(option, 10));
+    console.log(summa);
+    
+    for(let i=0;i<8;i++){
+      if(summa[i]==0){
+        pins.push(0);
+      }
+      else{
+        pins.push(1);
+      }
+    }
 
-   
+
+    alert(pins);
+    console.log(pins);
+    console.log(updatedCandidates);
+    console.log(votes);
     try {
       const response = await axios.post('http://localhost:5000/config', {
         id: serialID,  // Send Serial ID from form input
-        pins: summa, // Send the selected options as 'pins'
+        pins: pins, // Send the selected options as 'pins'
+        candinames:updatedCandidates,
+        grouppins:summa,
+        vote:votes,
       });
 
       console.log('API Response:', response.data);

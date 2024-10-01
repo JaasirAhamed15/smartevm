@@ -60,6 +60,7 @@
 }
 
 .submit-btn:hover{
+    transform: scale(1.1);
     box-shadow: 0 5px 15px #4CAF4F;
     border: #4CAF4F;
 }
@@ -79,6 +80,7 @@
 
 
 .cancel-btn:hover{
+    transform: scale(1.1);
     box-shadow: 0 5px 15px #ff0000;
     border: #ff0000;
 }
