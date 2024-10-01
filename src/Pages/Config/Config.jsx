@@ -1,39 +1,44 @@
 import React, { useState } from 'react';
 import './Config.css';
 import Navbar from '../../Components/Navbar/Navbar';
-import axios from 'axios';  // Import axios for making the API call
+import axios from 'axios';  
 
 const Config = () => {
-  const [candidates, setCandidates] = useState(Array(8).fill(''));  // To store submitted candidate names
-  const [options, setOptions] = useState(Array(8).fill('0'));  // To store submitted options
-  const [serialID, setSerialID] = useState('');  // Store Serial ID
+  const [candidates, setCandidates] = useState(Array(8).fill('')); 
+  const [options, setOptions] = useState(Array(8).fill('0'));  
+  const [serialID, setSerialID] = useState('');  
 
   const btnclick = async () => {
     const updatedCandidates = [];
     const updatedOptions = [];
 
-    // Loop through 8 input and select elements to capture the values on button click
+    
+    if (!serialID) {
+      alert("Serial ID is required.");
+      return;
+    }
+
     for (let i = 0; i < 8; i++) {
       const candidateValue = document.getElementById(`candidate${i + 1}`).value;
       const optionValue = document.getElementById(`opt${i + 1}`).value;
+
+      if (!candidateValue) {
+        alert(`Candidate Name ${i + 1} is required.`);
+        return;
+      }
 
       updatedCandidates.push(candidateValue);
       updatedOptions.push(optionValue);
     }
 
-    // Update the state only when "Submit" is clicked
+    
     setCandidates(updatedCandidates);
     setOptions(updatedOptions);
-    
-    alert(`Candidate Names: ${updatedCandidates.join(', ')}\nOptions: ${updatedOptions.join(', ')}`);
-    alert(`${updatedOptions.join(',')}`);
-    
 
-    var summa  = updatedOptions.map(option => parseInt(option));
-    console.log(updatedOptions);
-    console.log(summa);
+    // Map the options to integers
+    const summa = updatedOptions.map(option => parseInt(option, 10));
 
-    // Make API call to your Express server
+   
     try {
       const response = await axios.post('http://localhost:5000/config', {
         id: serialID,  // Send Serial ID from form input
@@ -56,13 +61,13 @@ const Config = () => {
         className='name'
         id={`candidate${index + 1}`}
         placeholder={`Enter Candidate Name ${index + 1}`}
-        defaultValue={candidates[index]}  // Display initial value after the first submission
+        defaultValue={candidates[index]}
         required
       />
       <select
         id={`opt${index + 1}`}
         className='option'
-        defaultValue={options[index]}  // Display initial option after the first submission
+        defaultValue={options[index]}
       >
         <option value="0">Disable</option>
         {[...Array(8)].map((_, optIndex) => (
@@ -80,12 +85,13 @@ const Config = () => {
       <div className="config-body">
         <div className="config-details">
           <div className="config-head">
-            <h1>Config</h1>
+            <h1 className='config-text'>Config</h1>
             <input
               type="text"
               placeholder="Enter Your Serial ID"
               value={serialID}  // Bind Serial ID state
-              onChange={(e) => setSerialID(e.target.value)}  // Update state on input change
+              onChange={(e) => setSerialID(e.target.value)}  
+              required
             />
           </div>
           <div className="config-submit">
