@@ -5,6 +5,7 @@ import './App.css'
 import Dashboard from './Pages/Dashboard/Dashboard'
 import Config from './Pages/Config/Config'
 import Register from './Pages/Register/Register'
+import Result from './Pages/Result/Result'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +14,8 @@ function App() {
     <div>
         {/* <Config/> */}
         {/* <Register/> */}
-        <Dashboard />
+        {/* <Dashboard /> */}
+        <Result/>
     </div>
   )
 }
