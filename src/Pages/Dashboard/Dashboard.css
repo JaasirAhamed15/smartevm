@@ -1,9 +1,36 @@
+.header {
+    width: 100%;
+    height: 60vh;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-evenly;
 
-
-.home{
-
-    background-color: green;
-    width: 500px;
-    height: 500px;
-    
+}
+.header .left {
+    width: 25%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    padding: 0 2em 2em;
+}
+.header .left h2 {
+    color: #4CAF4F;
+    font-size: 50px;
+}
+.header .right{
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+.header .right img{
+    height: 90%;
+    mix-blend-mode: multiply;
+    /* padding: 2em 2em; */
+}
+.header .right img:hover {
+    transform: scale(1.2);
+    transition: 1.3s;
 }

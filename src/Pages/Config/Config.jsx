@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Config.css';
 import Navbar from '../../Components/Navbar/Navbar';
-import axios from 'axios';  
+import axios from 'axios';
 
 const Config = () => {
   const [candidates, setCandidates] = useState(Array(8).fill('')); 
