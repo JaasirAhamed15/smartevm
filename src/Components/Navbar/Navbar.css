@@ -10,6 +10,7 @@
     /* z-index: 1000; */
     padding-bottom: 15px;
     border-bottom: black solid 1px;
+    height: 10vh;
 }
 
 .navbar h2 {
@@ -67,5 +68,5 @@
 
 .navbar button:hover {
     box-shadow: 0 5px 15px #4CAF4F;
-    border: #4CAF4F;
+    /* border: #4CAF4F; */
 }

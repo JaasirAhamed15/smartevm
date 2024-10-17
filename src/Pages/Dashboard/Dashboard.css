@@ -1,11 +1,11 @@
 .header {
     width: 100%;
-    height: 60vh;
+    height: 100vh;
     background-color: #f2f2f2;
     display: flex;
     justify-content: space-evenly;
-
 }
+
 .header .left {
     width: 25%;
     height: auto;
@@ -15,22 +15,133 @@
     gap: 20px;
     padding: 0 2em 2em;
 }
+
 .header .left h2 {
     color: #4CAF4F;
     font-size: 50px;
 }
-.header .right{
+
+.header .right {
     height: auto;
     width: auto;
     display: flex;
     align-items: center;
 }
-.header .right img{
-    height: 90%;
+
+.header .right img {
+    height: 80%;
     mix-blend-mode: multiply;
     /* padding: 2em 2em; */
 }
+
 .header .right img:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
     transition: 1.3s;
+}
+
+
+.features .content {
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+}
+
+.features .content .center {
+    height: 80%;
+    color: black;
+    border: black solid 1px;
+}
+
+.features .content .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua;
+    border-radius: 10%; */
+}
+
+.features .content .right h2 {
+    font-size: 48px;
+    color: #4CAF4F;
+}
+
+
+.features .item {
+    display: flex;
+    color: white;
+    gap: 10px;
+    background-color: rgb(90, 176, 216);
+    height: 50px;
+    width: 80vh;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    font-size: 25px;
+    margin-top: 25px;
+    border-radius: 25px;
+}
+
+.features .content .right .list {
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.features .content .left img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features .content .left img:hover {
+    transform: scale(1.05);
+    transition: 1.3s;
+}
+
+.features .content .right .list .item:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.product .content {
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+}
+
+.product .content .left h2 {
+    font-size: 48px;
+    color: #4CAF4F;
+}
+
+.product .content .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product .content .right img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product .content .right img:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
 }
