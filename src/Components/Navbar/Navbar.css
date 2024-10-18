@@ -43,7 +43,7 @@
 
 .navbar-menu :hover {
     /* font-size: 25px; */
-    border-bottom: 3px solid #4CAF4F;
+    border-bottom: 3px solid #4ed0fe;
     transition: 0.1s;
 }
 
@@ -60,13 +60,15 @@
     font-size: 1em;
     font-weight: 500;
     font-family: inter;
-    background-color: #4CAF4F;
+    background-color: #4ed0fe;/*yelow#fdf212  blue: #4ed0fe */
     color: white;
+    font-weight: 500;
     cursor: pointer;
     transition: border-color 0.25s;
 }
 
 .navbar button:hover {
-    box-shadow: 0 5px 15px #4CAF4F;
+    box-shadow: 0 5px 15px #00a6ff;
+    /* background-color: #fdf212; */
     /* border: #4CAF4F; */
 }

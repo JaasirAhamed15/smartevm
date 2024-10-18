@@ -18,6 +18,7 @@
 .config-details h1 {
     font-size: 50px;
     color: rgb(0, 0, 120);
+    /* border: 1px solid yellow; */
     padding-left:5vw;
 }
 
@@ -34,7 +35,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
-
     border: none;
 }
 
@@ -48,7 +48,7 @@
 
 
 .submit-btn{
-    background-color: #4CAF4F;
+    background-color: #4ed0fe;
     font-family:  Georgia, 'Times New Roman', Times, serif;
     color: white;
     font-size: 20px;
@@ -61,8 +61,8 @@
 
 .submit-btn:hover{
     transform: scale(1.1);
-    box-shadow: 0 5px 15px #4CAF4F;
-    border: #4CAF4F;
+    box-shadow: 0 5px 15px #4ed0fe;
+    border: #4ed0fe;
 }
 
 .cancel-btn{
@@ -95,7 +95,7 @@
 
 .button-design{
 
-    background: #4CAF4F;
+    background: #4ed0fe;
     width: 65vw;
     height: 10vh;
     border-radius: 15px;
@@ -108,8 +108,9 @@
 .button-design h1{
 
     font-size: 40px;
-    color: white;
-    padding: 10px;
+    color: #fff200;
+    /* padding: 10px; */
+    margin-bottom: 10px;
 }
                         
 .name{
@@ -131,5 +132,5 @@
     border-radius: 20px;
     margin: 15px;
     padding: 5px;
-    font-size: 16px;
+    font-size: 16px;
 }

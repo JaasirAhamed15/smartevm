@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
         {/* <Config/> */}
-        <Register/>
+        <Register/> 
         {/* <Dashboard /> */}
         {/* <Result/> */}
     </div>

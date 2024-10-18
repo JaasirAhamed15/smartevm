@@ -1,12 +1,14 @@
 .main{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    background-color: white;
 }
+
 .left{
     background: #F2F2F2;
     width: 46vw;
-    height: 85vh;
+    height: 90vh;
     /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
@@ -17,33 +19,31 @@
 .reg-head{
     color: rgb(0, 0, 120);
     font-size: 2vw;
-    padding-left: 10vw;
-    margin-top: 2vh;
+    /* padding-left: 1vw; */
+    margin-top: 2vh; 
 }
 .inputs{
     justify-content: center;
     align-items: center;
 }
 .inputs input{
-    width: 40vw;
+    width: 37vw;
     height: 5vh;
     /* margin: 20px; */
     margin-left: 2vw;
     margin-right: 2vw;
     margin-bottom: 15px;
-    border: 0.5px solid #4CAF4F;
+    border: 0.5px solid #4ed0fe;
     border-radius: 30px;
     /* background: #ffffff; */
     padding: 10px;
     padding-left: 20px;
     font-size: 14px;
-    /* color: #4CAF4F; */
+    /* color: #4ed0fe; */
     font-weight: 500;
     outline: none;
 
 }
-
-
 
 .btn {
     display: flex;
@@ -55,8 +55,10 @@
 
 
 
+
+
 .btn-sub{
-    background-color: #4CAF4F;
+    background-color: #4ed0fe;
     font-family:  Georgia, 'Times New Roman', Times, serif;
     color: white;
     font-size: 20px;
@@ -69,8 +71,8 @@
 
 .btn-sub:hover{
     transform: scale(1.1);
-    box-shadow: 0 5px 15px #4CAF4F;
-    border: #4CAF4F;
+    box-shadow: 0 5px 15px #4ed0fe;
+    border: #4ed0fe;
 }
 
 .can-btn{
@@ -93,11 +95,22 @@
     border: #ff0000;
 }
 
+
+
 .right{
 
     background: #F2F2F2;
     width: 50vw;
     height: 85vh;
+    margin-top: 10px;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+.right{
+
+    background: #F2F2F2;
+    width: 48vw;
+    height: 90vh;
     margin-top: 10px;
     justify-content: space-between;
     /* border: 1px solid black; */
@@ -109,7 +122,9 @@
     margin-left: 3vh;
     margin-top: 2vh;
 }
-
+.login h1{
+    margin-left: 2vw;
+}
 .login-btn {
     display: flex;
     flex-direction: row-reverse;
@@ -121,7 +136,7 @@
 
 
 .login-btn-sub{
-    background-color: #4CAF4F;
+    background-color: #4ed0fe;
     font-family:  Georgia, 'Times New Roman', Times, serif;
     color: white;
     font-size: 20px;
@@ -134,8 +149,8 @@
 
 .login-btn-sub:hover{
     transform: scale(1.1);
-    box-shadow: 0 5px 15px #4CAF4F;
-    border: #4CAF4F;
+    box-shadow: 0 5px 15px #4ed0fe;
+    border: #4ed0fe;
 }
 
 .login-can-btn{
@@ -165,13 +180,13 @@
     margin-left: 3vw;
     margin-right: 2vw;
     margin-bottom: 15px;
-    border: 0.5px solid #4CAF4F;
+    border: 0.5px solid #4ed0fe;
     border-radius: 30px;
     /* background: #ffffff; */
     padding: 10px;
     padding-left: 20px;
     font-size: 14px;
-    /* color: #4CAF4F; */
+    /* color: #4ed0fe; */
     font-weight: 500;
     outline: none;
 
